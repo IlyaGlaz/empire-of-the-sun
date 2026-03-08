@@ -1,0 +1,94 @@
+<style>
+    .scenario_info { display: none; }
+    .scenario_info.show { display: block; }
+</style>
+
+<div class="scenario_info" id="Full Campaign">
+<p>
+The Full Campaign covers the entire Pacific War from December 1941 to August 1945 (game turns 1–12).
+It begins with the December 1941 Special Turn in which the Japanese play Operation Z and IAI.
+This is the complete game experience and is designed for competitive play.
+See section 17.1 in the rulebook.
+</div>
+
+<div class="scenario_info" id="1942">
+<p>
+The 1942 scenario is three game turns long (turns 2–4) and begins at the start of the Offensives Phase on game turn 2.
+There is no Reinforcement, Replacement, or Strategic Warfare Segment for game turn 2.
+Japanese cards #1 and #2 are not in play.
+The scenario is concluded at the end of game turn 4.
+See section 17.2 in the rulebook.
+</div>
+
+<div class="scenario_info" id="1943">
+<p>
+The 1943 scenario is three game turns long (turns 5–7) and begins at the start of the Offensives Phase on game turn 5.
+There is no Reinforcement, Replacement, or Strategic Warfare Segment for game turn 5.
+The scenario is concluded at the end of game turn 7.
+This scenario has become the main tournament format.
+See section 17.3 in the rulebook.
+</div>
+
+<div class="scenario_info" id="1944">
+<p>
+The 1944 scenario is three game turns long (turns 8–10) and begins at the start of the Offensives Phase on game turn 8.
+There is no Reinforcement, Replacement, or Strategic Warfare Segment for game turn 8.
+The scenario is concluded at the end of game turn 10.
+See section 17.4 in the rulebook.
+</div>
+
+<div class="scenario_info" id="1942-1943">
+<p>
+This scenario uses the starting conditions and setup of the 1942 scenario (17.2),
+plays turns 2–7, and uses the victory conditions of the 1943 scenario (17.3).
+See section 17.5 in the rulebook.
+</div>
+
+<div class="scenario_info" id="1943-1944">
+<p>
+This scenario uses the starting conditions and setup of the 1943 scenario (17.3),
+plays turns 5–10, and uses the victory conditions of the 1944 scenario (17.4).
+See section 17.6 in the rulebook.
+</div>
+
+<div class="scenario_info" id="1942-1944">
+<p>
+This scenario uses the starting conditions and setup of the 1942 scenario (17.2),
+plays turns 2–10, and uses the victory conditions of the 1944 scenario (17.4).
+See section 17.7 in the rulebook.
+</div>
+
+<div class="scenario_info" id="Shortened Campaign">
+<p>
+The Shortened Campaign (1942–1945) starts with the setup of the 1942 scenario (17.2) but plays
+the rest of the war using the Full Campaign scenario (17.1) conditions and length, including
+its victory conditions.
+See section 17.8 in the rulebook.
+</div>
+
+<div class="scenario_info" id="Even Shorter Campaign">
+<p>
+The Even Shorter Campaign (1943–1945) starts with the setup of the 1943 scenario (17.3) but plays
+the rest of the war using the Full Campaign scenario (17.1) conditions and length, including
+its victory conditions.
+See section 17.9 in the rulebook.
+</div>
+
+<div class="scenario_info" id="South Pacific">
+<p>
+The South Pacific scenario uses the South Pacific mini-map instead of the main map.
+It is four game turns long (turns 3–6) and begins at the start of the Offensives Phase on game turn 3,
+with the US having the option to use their Future Offensive card to pre-empt the Japanese going first.
+Both sides draw 4 cards per turn instead of 7. Uses a custom 24-card deck for each side.
+See section 17.10 in the rulebook.
+</div>
+
+<script>
+let scenario = document.querySelector("select[name='scenario']");
+scenario.onchange = function (evt) {
+    document.querySelectorAll(".scenario_info").forEach(e => e.classList.remove("show"));
+    let info = document.getElementById(scenario.value);
+    if (info) info.classList.add("show");
+}
+scenario.onchange();
+</script>
